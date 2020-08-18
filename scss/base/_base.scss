@@ -6,7 +6,23 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; //1rem = 10px
+
+    @include respond(phone) {
+      font-size: 50%; //1 rem = 8px
+    }
+
+    @include respond(tab-land) { //larger media queries have to go first just in case you have to conflicting media queries
+      font-size: 56.25%; // 1 rem = 9px //width < 1200?
+    }
+
+    @include respond(tab-port) {
+      font-size: 50%; // 1 rem = 8px //width < 900?
+    }
+
+    @include respond(big-desktop) {
+      font-size: 75%; //1 rem = 12px
+    }
+
 }
 
-    

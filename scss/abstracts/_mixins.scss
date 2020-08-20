@@ -34,6 +34,8 @@ ems are the best for media queries
     //@media (max-width: 600px) {@content}; OK Solution but not the best
 //}
 
+//Order: Base + typography > general layout + grid > page layout > components
+
 /*
 $breakpoint arguments
 -phone
@@ -51,4 +53,7 @@ $breakpoint arguments
 
     @if $breakpoint == big-desktop {@media (min-width: 112.5em) {@content}}; //1800px
 } 
+
+//If two media queries collide, the last declaration will be applied.
+//Dont worry about the media queries above, this rule applies to when you set your markups on the other pages
 

@@ -8,9 +8,12 @@
     /*Top of the image stays in place when screen is resized*/
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    /*!!!!!!IMPORTANT!!!!!!*/
     position: relative;
-    /*Makes its child elements the starting point of the positioning*/ 
+    @include respond(phone) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+    
   
     &__logo-box {
       position: absolute;
